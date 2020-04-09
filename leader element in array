@@ -1,0 +1,25 @@
+//a element called leader element if there no right element greater then that element
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+    int arr[]={9,8,7,6,5,4,3,2,1};
+    
+    int temp=arr[8];
+    int a[9];
+    a[0]=temp;
+    int j=1;
+    for(int i=7;i>=0;i--){
+        if(arr[i]>temp){
+            a[j]=arr[i];
+            temp=arr[i];
+            j++;
+        }
+    }
+    
+    for(int i=0;i<j;i++){
+        cout<<a[i]<<" ";
+    }
+}
